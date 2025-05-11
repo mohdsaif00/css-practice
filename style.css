@@ -1,0 +1,239 @@
+/* common chiz jo har project me krna h sab chiz 0 kr dena hai  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* ab karte hai button ko style */
+
+
+/* point:- agar hum kisi direct element ko style kr rhe hai to hum sidha element name likh kr, kr skte hai or agar kisi class ko krna ho to us class ke aam ke piche . lgayenge or agar kisi id ko kr rhe hai to # lgayenge id se pehle */
+
+button {
+    /* pehle padding */
+    padding: 20px;
+    /* sirf padding likhne se ye chaaro taraf ki area ko same padding de deta hai */
+    /* ============================================================================= */
+    /* hum single single bhi de skte h just like that */
+    /* padding-top: ;
+    padding-bottom: ;
+    padding-left: ;
+    padding-right: ; */
+    /* aap notice ki hongi ki isse code lengthy hora h to iske liye short-hand propertie hai  */
+    /* ============================================================================= */
+    /* padding: top,right,bottom,left; */
+    /* aap aise likh kr har direction ki padding ek hi line me de skti example */
+    padding: 20px 10px 15px 30px;
+    /* aapne notice kiya har direction me alag alag padding hai hai  */
+    /* ============================================================================= */
+    /* to basically padding isliye use h ki hm kisi container ke gap bna ske use hm padding bolte hai or same margin hm margin me bs box ke bahar space dete hai jaise dekhiye  */
+    margin-left: 50px;
+    /* ============================================================================= */
+    /* ab aapko smjh aa gya hoga ki padding kaha use ho rha hai or margin ab aata hai border so basically border to kisi bhi element ke jo chaaro or outline hoti h use bolte hai border just like */
+    border: 3px solid red;
+    /* isme bhi hm border-top,left,bootom,right kr ke likh skte hai */
+    /* bs itna mainly usecase h box-model ka  */
+}
+
+
+/* ab aate hai positon tough hai but code se smjhiye */
+
+
+/* ============================================================================= */
+
+
+/* CSS me position ek property hoti hai jo kisi element ka layout define karti hai — yaani, woh element page ke kis part me kaise dikhega, woh kis base pe move hoga (jaise top, left, etc.). */
+
+
+/* ============================================================================= */
+
+
+/* Fixed header ke liye styling */
+
+
+/* ============================================================================= */
+
+
+/* fixed header means wo waha se move nhi hoga */
+
+.header {
+    position: fixed;
+    /* Hamesha top par chipka rahega */
+    top: 0;
+    /* Top se 0 distance */
+    left: 0;
+    /* Left se bhi 0 */
+    width: 100%;
+    /* Full page width */
+    background: #333;
+    /* Dark background */
+    color: white;
+    /* White text */
+    padding: 10px;
+    /* Andar thoda space */
+    text-align: center;
+    /* Text center me */
+    z-index: 1000;
+    /* Upar dikhne ke liye layer priority */
+}
+
+
+/* Page content jahan actual boxes honge */
+
+.content {
+    padding-top: 60px;
+    /* Header ke neeche content aaye */
+}
+
+
+/* ============================================================================= */
+
+
+/* Relative position box */
+
+.relative-box {
+    position: relative;
+    /* Apni position ke hisaab se move karega */
+    background: lightblue;
+    /* Light blue background */
+    width: 200px;
+    height: 150px;
+    margin: 50px;
+    /* Bahar se space */
+}
+
+
+/* ============================================================================= */
+
+
+/* Absolute box jo relative ke andar hai */
+
+.absolute-box {
+    position: absolute;
+    /* Relative box ke corner me aayega */
+    top: 10px;
+    /* Top se 10px */
+    right: 10px;
+    /* Right side se 10px */
+    background: orange;
+    /* Orange color */
+    padding: 5px;
+    /* Andar se space */
+}
+
+
+/* ============================================================================= */
+
+
+/* Sticky note jo scroll hone ke baad chipak jaata hai */
+
+.sticky-note {
+    position: sticky;
+    /* Scroll ke time chipak jaayega */
+    top: 10px;
+    /* Top par 10px distance se chipkega */
+    background: yellow;
+    /* Yellow background */
+    padding: 10px;
+    margin: 50px 0;
+    /* Top/bottom margin */
+    border: 1px solid #ccc;
+    /* Light border */
+}
+
+
+/* ============================================================================= */
+
+
+/* Static box - default position */
+
+.static-box {
+    position: static;
+    /* Default position hoti hai */
+    background: pink;
+    /* Pink background */
+    padding: 20px;
+    margin: 20px;
+}
+
+
+/* ============================================================================= */
+
+
+/* ab aate hai flex me what is flex to basically flex */
+
+
+/* display: flex ek powerful layout technique hai jisse tum elements ko line-by-line (row) ya upar-se-neeche (column) me easily arrange kar sakte ho. */
+
+
+/* Flex container */
+
+.flex-container {
+    display: flex;
+    /* Flex layout on */
+    flex-direction: row;
+    /* Side-by-side items */
+    justify-content: center;
+    /* Center me lane ke liye */
+    align-items: center;
+    /* Vertically center */
+    height: 100vh;
+    /* Full screen height */
+    background-color: #f0f0f0;
+}
+
+
+/* Flex items */
+
+.box {
+    background: #4caf50;
+    color: white;
+    padding: 30px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+
+/* ab hum smjhte hai grid kya hota hai */
+
+
+/* CSS Grid ek 2D layout system hai — yaani tum elements ko row aur column dono me arrange kar sakte ho.
+
+Grid ko kab use karein?
+
+Jab tumhe complex layout chahiye — jaise website ka full page layout with sidebar, header, content, etc.
+
+Jab row + column dono control karna ho. */
+
+
+/* Grid container */
+
+.grid-container {
+    display: grid;
+    /* Grid layout on */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* 3 equal columns */
+    gap: 20px;
+    /* Space between items */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+
+/* Grid items */
+
+.grid-item {
+    background-color: #2196f3;
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+
+/* yehi main topic hai to dhyan se pdhiye jo padh rhi hai use pdhiye baaki chiz ko comment kr dijiye kuch der ke lie or kuch topics na smjh aye to boliye me isme add kr dunga ,bye bye best of luck */
