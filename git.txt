@@ -1,0 +1,9 @@
+git me code push kaise krte hai ye bhi sikh lijiye 
+commands====
+
+
+1. git init
+2. git add .
+3. git commit -m "any comment"
+5. git remote add origin https url
+6. git push origin
